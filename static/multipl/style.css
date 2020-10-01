@@ -1,0 +1,11 @@
+li a {
+    color: green;
+}
+body {
+    background: rgba(76, 175, 80, 0.3) url("images/careaux.png") no-repeat;
+}
+
+.paper {
+    background-image: url("images/careaux.png");
+    opacity: 0.3;
+}
