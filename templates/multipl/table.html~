@@ -1,57 +1,26 @@
-<!DOCTYPE html>
-<html>
-  <head>
-  {% load static %}
-  <link rel="stylesheet" type="text/css" href="{% static 'multipl/table.css' %}">
-  
-    <meta charset="utf-8">
-    <title>My test page</title>
-  </head>
-  <body>
-
-<h1>{{ question.question_text }}</h1>
-
-{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-
-<form action="{% url 'multipl:vote' question.id %}" method="post">
-{% csrf_token %}
-{% for choice in question.choice_set.all %}
-    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
-    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
-{% endfor %}
-<input type="submit" value="Vote">
-</form>
-
-
 <div class="divTable" style="border: 4px solid #000;" >
 <div class="divTableBody">
 <div class="divTableRow">
-<div class="divTableCell">1 x 2 =</label>
-  <input type="text" id="1x2" name="1x2" size="2"></div>
 <div class="divTableCell">&nbsp;</div>
 <div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">3 x 4 =</label>
-  <input type="text" id="3x4" name="3x4" size="2"></div>
 <div class="divTableCell">&nbsp;</div>
 <div class="divTableCell">&nbsp;</div>
-</div>
-<div class="divTableRow">
-<div class="divTableCell">5 x 6 =</label>
-  <input type="text" id="5x6" name="5x6" size="2"></div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">7 x 8 =</label>
-  <input type="text" id="7x8" name="7x8" size="2"></div>
 <div class="divTableCell">&nbsp;</div>
 <div class="divTableCell">&nbsp;</div>
 </div>
 <div class="divTableRow">
-  <div class="divTableCell"><label for="9x10">9 x 10 =</label>
-  <input type="text" id="9x10" name="9x10" size="2"></div>
 <div class="divTableCell">&nbsp;</div>
 <div class="divTableCell">&nbsp;</div>
-<div class="divTableCell"><label for="9x11">9 x 11 =</label>
-  <input type="text" id="9x11" name="9x11" size="2"></div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
 <div class="divTableCell">&nbsp;</div>
 <div class="divTableCell">&nbsp;</div>
 </div>
@@ -129,34 +98,4 @@
 </div>
 </div>
 </div>
-
-
-
-<input type="submit" value="Submit">
-
-<!-- <h1>{{ question.question_text }}</h1> -->
-
-<!-- {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %} -->
-
-<!-- <form action="{% url 'multipl:vote' question.id %}" method="post"> -->
-<!-- {% csrf_token %} -->
-<!-- {% for choice in question.choice_set.all %} -->
-<!--     <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}"> -->
-<!--     <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br> -->
-<!-- {% endfor %} -->
-<!-- <input type="submit" value="Vote"> -->
-
-
-
-
-<!--
-
-    <h1>{{ question.question_text }}</h1>
-<ul>
-{% for choice in question.choice_set.all %}
-    <li>{{ choice.choice_text }}</li>
-{% endfor %}
-</ul>
--->
-  </body>
-</html>
+<!-- DivTable.com -->
